@@ -96,20 +96,42 @@
       text-decoration: underline;
     }
 
+    /*
+      Publications
+    */
+
     .publication {
-      margin: 0 0 28px;
+      margin: 0 0 30px;
     }
 
     .publication p {
-      margin-bottom: 0;
+      margin: 0;
+    }
+
+    .authors {
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .title-year {
+      margin-top: 2px;
+      line-height: 1.55;
     }
 
     .paper-title {
       font-weight: 600;
     }
 
-    .journal {
+    .publication-year {
+      white-space: nowrap;
+    }
+
+    .venue {
+      margin-top: 2px;
+      color: var(--secondary);
+      font-size: 0.96rem;
       font-style: italic;
+      line-height: 1.5;
     }
 
     .news-links {
@@ -136,16 +158,13 @@
     }
 
     /*
-      Image gallery
+      Research gallery
     */
 
     .visual-gallery {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
-      margin-top: 70px;
-      padding-top: 35px;
-      border-top: 1px solid var(--border);
     }
 
     .visual-item {
@@ -177,6 +196,10 @@
       font-size: 0.92rem;
       line-height: 1.45;
       text-align: center;
+    }
+
+    .visual-item figcaption a {
+      font-weight: 600;
     }
 
     footer {
@@ -237,7 +260,9 @@
       </p>
     </header>
 
-    <section aria-label="About">
+    <section aria-labelledby="bio">
+      <h2 id="bio">Bio</h2>
+
       <p>
         I am a postdoctoral researcher in the Division of Biology and
         Biological Engineering at Caltech. I received my PhD from MIT
@@ -252,12 +277,17 @@
       </p>
     </section>
 
-    <section aria-labelledby="selected-work">
-      <h2 id="selected-work">Selected Work</h2>
+    <section aria-labelledby="publications">
+      <h2 id="publications">Publications</h2>
 
       <article class="publication">
-        <p>
-          X. Shan<sup>#</sup>, I. B. Trindade<sup>#</sup>, et al.
+        <p class="authors">
+          Xiaoyu Shan<sup>#</sup>, Inês B. Trindade<sup>#</sup>,
+          Nathaniel R. Glasser, Korbinian O. Thalhammer, Matthew Scurria,
+          Ariane Mora, Stuart J. Conway, and Dianne K. Newman
+        </p>
+
+        <p class="title-year">
           <a
             class="paper-title"
             href="https://doi.org/10.64898/2026.03.05.709892"
@@ -267,13 +297,21 @@
             Discovery of a phenazine thiol conjugase from sparse data
             using genome-informed machine learning.
           </a>
-          Preprint (2026).
+          <span class="publication-year">(2026)</span>
+        </p>
+
+        <p class="venue">
+          Preprint
         </p>
       </article>
 
       <article class="publication">
-        <p>
-          X. Shan, K. Cao, H. Jeckel, et al.
+        <p class="authors">
+          Xiaoyu Shan, Karen Cao, Hannah Jeckel, Reinaldo E. Alcalde,
+          Inês B. Trindade, Jarek V. Kwiecinski, and Dianne K. Newman
+        </p>
+
+        <p class="title-year">
           <a
             class="paper-title"
             href="https://doi.org/10.1038/s41564-026-02274-x"
@@ -282,8 +320,11 @@
           >
             Drought drives elevated antibiotic resistance across soils.
           </a>
-          <span class="journal">Nature Microbiology</span>
-          11, 867–876 (2026).
+          <span class="publication-year">(2026)</span>
+        </p>
+
+        <p class="venue">
+          Nature Microbiology 11, 867–876
         </p>
 
         <div class="news-links">
@@ -316,9 +357,12 @@
       </article>
 
       <article class="publication">
-        <p>
-          X. Shan, K. Li, P. Stadler, M. Borbor, G. Reyes,
-          R. Solórzano, E. Chamorro, B. Bayot, and O. X. Cordero.
+        <p class="authors">
+          Xiaoyu Shan, K. Li, P. Stadler, M. Borbor, G. Reyes,
+          R. Solórzano, E. Chamorro, B. Bayot, and Otto X. Cordero
+        </p>
+
+        <p class="title-year">
           <a
             class="paper-title"
             href="https://doi.org/10.1128/aem.02420-24"
@@ -328,16 +372,23 @@
             Microbiome determinants of productivity in aquaculture
             of whiteleg shrimp.
           </a>
-          <span class="journal">
-            Applied and Environmental Microbiology
-          </span>
-          91, e02420-24 (2025).
+          <span class="publication-year">(2025)</span>
+        </p>
+
+        <p class="venue">
+          Applied and Environmental Microbiology 91, e02420-24
         </p>
       </article>
 
       <article class="publication">
-        <p>
-          X. Shan<sup>#</sup>, P. A. Wasson<sup>#</sup>, et al.
+        <p class="authors">
+          Xiaoyu Shan<sup>#</sup>, Philip A. Wasson<sup>#</sup>,
+          YuanQiao Rao, Scott Backer, Lyndsay Leal, Vurtice C. Albright III,
+          Wei Gao, Yunzhou Chai, Andreas Sichert, Shaul Pollak, Ligeng Yin,
+          and Otto X. Cordero
+        </p>
+
+        <p class="title-year">
           <a
             class="paper-title"
             href="https://doi.org/10.1021/acs.est.4c02769"
@@ -347,16 +398,20 @@
             Simple genomic traits predict rates of polysaccharide
             biodegradation.
           </a>
-          <span class="journal">
-            Environmental Science &amp; Technology
-          </span>
-          58, 13000–13009 (2024).
+          <span class="publication-year">(2024)</span>
+        </p>
+
+        <p class="venue">
+          Environmental Science &amp; Technology 58, 13000–13009
         </p>
       </article>
 
       <article class="publication">
-        <p>
-          X. Shan, A. Goyal, R. Gregor, and O. X. Cordero.
+        <p class="authors">
+          Xiaoyu Shan, A. Goyal, R. Gregor, and Otto X. Cordero
+        </p>
+
+        <p class="title-year">
           <a
             class="paper-title"
             href="https://doi.org/10.1038/s41559-023-02021-z"
@@ -366,14 +421,20 @@
             Annotation-free discovery of functional groups in microbial
             communities.
           </a>
-          <span class="journal">Nature Ecology &amp; Evolution</span>
-          7, 716–724 (2023).
+          <span class="publication-year">(2023)</span>
+        </p>
+
+        <p class="venue">
+          Nature Ecology &amp; Evolution 7, 716–724
         </p>
       </article>
 
       <article class="publication">
-        <p>
-          X. Shan, R. E. Szabo, and O. X. Cordero.
+        <p class="authors">
+          Xiaoyu Shan, R. E. Szabo, and Otto X. Cordero
+        </p>
+
+        <p class="title-year">
           <a
             class="paper-title"
             href="https://doi.org/10.1038/s41467-023-37512-x"
@@ -382,8 +443,11 @@
           >
             Mutation-induced infections of phage-plasmids.
           </a>
-          <span class="journal">Nature Communications</span>
-          14, 2049 (2023).
+          <span class="publication-year">(2023)</span>
+        </p>
+
+        <p class="venue">
+          Nature Communications 14, 2049
         </p>
       </article>
 
@@ -392,71 +456,75 @@
       </p>
     </section>
 
-    <div
-      class="visual-gallery"
-      role="group"
-      aria-label="Research illustrations"
-    >
-      <figure class="visual-item">
-        <div class="visual-frame">
-          <img
-            src="images/fig1.jpeg"
-            alt="A drought-affected landscape illustrating environmental change in soil ecosystems"
-            loading="lazy"
-          >
-        </div>
+    <section aria-labelledby="research">
+      <h2 id="research">Research</h2>
 
-        <figcaption>
-          <a
-            href="https://doi.org/10.1038/s41564-026-02274-x"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Drought reshapes microbial interactions across soils
-          </a>
-        </figcaption>
-      </figure>
+      <div
+        class="visual-gallery"
+        role="group"
+        aria-label="Research illustrations"
+      >
+        <figure class="visual-item">
+          <div class="visual-frame">
+            <img
+              src="images/fig1.jpeg"
+              alt="A drought-affected landscape illustrating environmental change in soil ecosystems"
+              loading="lazy"
+            >
+          </div>
 
-      <figure class="visual-item">
-        <div class="visual-frame">
-          <img
-            src="images/fig2.jpeg"
-            alt="Diagram illustrating unsupervised mapping from microbial community composition to phenotype"
-            loading="lazy"
-          >
-        </div>
+          <figcaption>
+            <a
+              href="https://doi.org/10.1038/s41564-026-02274-x"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Drought reshapes microbial interactions across soils
+            </a>
+          </figcaption>
+        </figure>
 
-        <figcaption>
-          <a
-            href="https://doi.org/10.1038/s41559-023-02021-z"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Unsupervised composition–function mapping in microbial communities
-          </a>
-        </figcaption>
-      </figure>
+        <figure class="visual-item">
+          <div class="visual-frame">
+            <img
+              src="images/fig2.jpeg"
+              alt="Diagram illustrating unsupervised mapping from microbial community composition to phenotype"
+              loading="lazy"
+            >
+          </div>
 
-      <figure class="visual-item">
-        <div class="visual-frame">
-          <img
-            src="images/fig3.jpeg"
-            alt="Protein model illustrating artificial-intelligence-guided discovery of biological machinery"
-            loading="lazy"
-          >
-        </div>
+          <figcaption>
+            <a
+              href="https://doi.org/10.1038/s41559-023-02021-z"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Unsupervised composition–function mapping in microbial communities
+            </a>
+          </figcaption>
+        </figure>
 
-        <figcaption>
-          <a
-            href="https://doi.org/10.64898/2026.03.05.709892"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            AI-driven discovery of biological machineries from sparse knowledge
-          </a>
-        </figcaption>
-      </figure>
-    </div>
+        <figure class="visual-item">
+          <div class="visual-frame">
+            <img
+              src="images/fig3.jpeg"
+              alt="Protein model illustrating artificial-intelligence-guided discovery of biological machinery"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption>
+            <a
+              href="https://doi.org/10.64898/2026.03.05.709892"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              AI-driven discovery of biological machinery from sparse knowledge
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
     <footer>
       © 2026 Xiaoyu Shan
