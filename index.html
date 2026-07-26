@@ -29,6 +29,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: var(--background);
@@ -55,7 +59,7 @@
     }
 
     h1 {
-      margin: 0 0 4px;
+      margin: 0 0 5px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: 2.7rem;
       font-weight: 500;
@@ -69,7 +73,7 @@
     }
 
     h2 {
-      margin: 50px 0 22px;
+      margin: 50px 0 25px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
       font-family: Georgia, "Times New Roman", serif;
@@ -92,10 +96,14 @@
     }
 
     .publication {
-      margin: 0 0 27px;
+      margin: 0 0 28px;
     }
 
-    .publication-title {
+    .publication p {
+      margin-bottom: 0;
+    }
+
+    .paper-title {
       font-weight: 600;
     }
 
@@ -103,12 +111,17 @@
       font-style: italic;
     }
 
-    .links {
-      margin-top: 5px;
-      font-size: 0.95rem;
+    .news-links {
+      margin-top: 7px;
+      font-size: 0.94rem;
     }
 
-    .links a:not(:last-child)::after {
+    .news-label {
+      margin-right: 4px;
+      color: var(--secondary);
+    }
+
+    .news-links a:not(:last-child)::after {
       margin: 0 8px;
       color: var(--secondary);
       content: "·";
@@ -116,6 +129,7 @@
     }
 
     .note {
+      margin-top: 32px;
       color: var(--secondary);
       font-size: 0.9rem;
     }
@@ -140,6 +154,10 @@
 
       h2 {
         margin-top: 38px;
+      }
+
+      body {
+        font-size: 16px;
       }
     }
   </style>
@@ -177,60 +195,45 @@
       <h2 id="selected-work">Selected Work</h2>
 
       <article class="publication">
-        <div>
-          X. Shan<sup>#</sup>, I. B. Trindade<sup>#</sup>, …,
-          D. K. Newman.
-        </div>
-
-        <div class="publication-title">
-          Discovery of a phenazine thiol conjugase from sparse data
-          using genome-informed machine learning.
-        </div>
-
-        <div>
-          <span class="journal">Proceedings of the National Academy of Sciences</span>,
-          2026.
-        </div>
-
-        <div class="links">
+        <p>
+          X. Shan<sup>#</sup>, I. B. Trindade<sup>#</sup>, et al.
           <a
+            class="paper-title"
             href="https://doi.org/10.64898/2026.03.05.709892"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DOI
+            Discovery of a phenazine thiol conjugase from sparse data
+            using genome-informed machine learning.
           </a>
-        </div>
+          Preprint (2026).
+        </p>
       </article>
 
       <article class="publication">
-        <div>
-          X. Shan, K. Cao, …, D. K. Newman.
-        </div>
-
-        <div class="publication-title">
-          Drought drives elevated antibiotic resistance across soils.
-        </div>
-
-        <div>
-          <span class="journal">Nature Microbiology</span>, 2026.
-        </div>
-
-        <div class="links">
+        <p>
+          X. Shan, K. Cao, H. Jeckel, et al.
           <a
+            class="paper-title"
             href="https://doi.org/10.1038/s41564-026-02274-x"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DOI
+            Drought drives elevated antibiotic resistance across soils.
           </a>
+          <span class="journal">Nature Microbiology</span>
+          11, 867–876 (2026).
+        </p>
+
+        <div class="news-links">
+          <span class="news-label">News:</span>
 
           <a
             href="https://www.caltech.edu/about/news/drought-leads-to-increased-antibiotic-resistant-microbes-in-soils"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Caltech News
+            Caltech
           </a>
 
           <a
@@ -252,106 +255,75 @@
       </article>
 
       <article class="publication">
-        <div>
-          X. Shan, K. Li, …, O. X. Cordero.
-        </div>
-
-        <div class="publication-title">
-          Microbiome determinants of productivity in aquaculture
-          of whiteleg shrimp.
-        </div>
-
-        <div>
-          <span class="journal">Applied and Environmental Microbiology</span>,
-          2025.
-        </div>
-
-        <div class="links">
+        <p>
+          X. Shan, K. Li, P. Stadler, M. Borbor, G. Reyes,
+          R. Solórzano, E. Chamorro, B. Bayot, and O. X. Cordero.
           <a
+            class="paper-title"
             href="https://doi.org/10.1128/aem.02420-24"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DOI
+            Microbiome determinants of productivity in aquaculture
+            of whiteleg shrimp.
           </a>
-        </div>
+          <span class="journal">
+            Applied and Environmental Microbiology
+          </span>
+          91, e02420-24 (2025).
+        </p>
       </article>
 
       <article class="publication">
-        <div>
-          X. Shan<sup>#</sup>, P. Wasson<sup>#</sup>, …,
-          O. X. Cordero.
-        </div>
-
-        <div class="publication-title">
-          Simple genomic traits predict the rate of polysaccharide
-          biodegradation.
-        </div>
-
-        <div>
-          <span class="journal">Environmental Science &amp; Technology</span>,
-          2024.
-        </div>
-
-        <div class="links">
+        <p>
+          X. Shan<sup>#</sup>, P. A. Wasson<sup>#</sup>, et al.
           <a
+            class="paper-title"
             href="https://doi.org/10.1021/acs.est.4c02769"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DOI
+            Simple genomic traits predict rates of polysaccharide
+            biodegradation.
           </a>
-        </div>
+          <span class="journal">
+            Environmental Science &amp; Technology
+          </span>
+          58, 13000–13009 (2024).
+        </p>
       </article>
 
       <article class="publication">
-        <div>
-          X. Shan, A. Goyal, …, O. X. Cordero.
-        </div>
-
-        <div class="publication-title">
-          Annotation-free discovery of functional groups in microbial
-          communities.
-        </div>
-
-        <div>
-          <span class="journal">Nature Ecology &amp; Evolution</span>,
-          2023.
-        </div>
-
-        <div class="links">
+        <p>
+          X. Shan, A. Goyal, R. Gregor, and O. X. Cordero.
           <a
+            class="paper-title"
             href="https://doi.org/10.1038/s41559-023-02021-z"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DOI
+            Annotation-free discovery of functional groups in microbial
+            communities.
           </a>
-        </div>
+          <span class="journal">Nature Ecology &amp; Evolution</span>
+          7, 716–724 (2023).
+        </p>
       </article>
 
       <article class="publication">
-        <div>
-          X. Shan, R. Szabo, O. X. Cordero.
-        </div>
-
-        <div class="publication-title">
-          Mutation-induced infections of phage-plasmids.
-        </div>
-
-        <div>
-          <span class="journal">Nature Communications</span>, 2023.
-        </div>
-
-        <div class="links">
+        <p>
+          X. Shan, R. E. Szabo, and O. X. Cordero.
           <a
+            class="paper-title"
             href="https://doi.org/10.1038/s41467-023-37512-x"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DOI
+            Mutation-induced infections of phage-plasmids.
           </a>
-        </div>
+          <span class="journal">Nature Communications</span>
+          14, 2049 (2023).
+        </p>
       </article>
 
       <p class="note">
